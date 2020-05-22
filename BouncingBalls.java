@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.util.Random;
 
-public class BouncingBlushBalls extends JPanel implements Runnable {
+public class BouncingBalls extends JPanel implements Runnable {
 
     Color color;
     int diameter;
@@ -14,7 +14,7 @@ public class BouncingBlushBalls extends JPanel implements Runnable {
     private int g = 1;
     boolean run=true;
 
-    public BouncingBlushBalls(String ballcolor, int xvelocity, int yvelocity, int xcoordinate, int ycoordinate) {
+    public BouncingBalls(String ballcolor, int xvelocity, int yvelocity, int xcoordinate, int ycoordinate) {
         if(ballcolor == "red") {
             color = Color.red;
         } else if(ballcolor == "random"){
@@ -102,7 +102,7 @@ public class BouncingBlushBalls extends JPanel implements Runnable {
 
     public static void main(String[] args) {
         Random random = new Random();
-        BouncingBlushBalls ball1 = new BouncingBlushBalls("red",random.nextInt(20),random.nextInt(20),10,10);
+        BouncingBalls ball1 = new BouncingBalls("red",random.nextInt(20),random.nextInt(20),10,10);
         JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.getContentPane().add(ball1);
